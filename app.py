@@ -7,13 +7,6 @@ from langchain.prompts import PromptTemplate
 from transformers import AutoProcessor, MusicgenForConditionalGeneration, pipeline
 
 
-def load_input():
-    dataset = load_dataset("sanchit-gandhi/gtzan", split="train", streaming=True)
-    sample = next(iter(dataset))["audio"]
-    # take the first half of the audio sample
-    sample["array"] = sample["array"][: len(sample["array"]) // 8]
-    return sample["array"]
-
 
 def imageToText(url):
     image_to_text = pipeline(
