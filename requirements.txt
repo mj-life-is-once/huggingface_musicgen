@@ -1,0 +1,8 @@
+transformers
+datasets
+numpy
+scipy
+tensorflow
+torch
+langchain
+openai
